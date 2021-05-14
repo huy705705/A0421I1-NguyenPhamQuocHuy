@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+        ul {
+            list-style: none;
+        }
+        body {
+            color: black;
+            font-family: Helvetica,sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        .clearfix {
+            zoom: 1;
+        }
+        .clearfix:after {
+            clear: both;
+            content: ".";
+            display: block;
+            height: 0;
+            line-height: 0;
+            visibility: hidden;
+        }
+
+
+
+
+        .span{
+            display: inline-block;
+            padding-left: 3px;
+            margin: 0;
+        }
+        .center{
+            text-align: center;
+            text-content:center;
+        }
+        .period{
+            margin-left: 10px;
+            text-align: center;
+        }
+        table,td{
+            border: 1px solid black;
+        }
+        table{
+            border-collapse: collapse;
+
+        }
+        td{
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1>Market Research Survey</h1>
+        <p>Please take a few moments to complete this satisfaction survey.</p>
+        <h3>What is your age range?</h3>
+        <select name="" id="">
+            <option value="">18-24</option>
+            <option value="">25-34</option>
+            <option value="">35-50</option>
+            <option value="">50+</option>
+        </select>
+        <h3>Gender</h3>
+        <lable ><input type="radio" name="gender">Male</lable>
+        <br>
+        <lable><input type="radio" name="gender">Female</lable>
+        <br>
+        <lable><input type="radio" name="gender">Nonbinary</lable>
+        <br>
+        <lable><input type="radio" name="gender">Other</lable>
+        <br>
+        <input type="text">
+        <h3>Which of the following products have your purchased in the last 2 months. Please check all that apply.</h3>
+        <input type="checkbox">Product 1 <br>
+        <input type="checkbox">Product 2 <br>
+        <input type="checkbox">Product 3 <br>
+        <h3>How often would you use our new product?</h3>
+        <input type="radio" name="scale">Daily <br>
+        <input type="radio" name="scale">Weekly <br>
+        <input type="radio" name="scale"> Monthly <br>
+        <h3>What would you pay for the new product?</h3>
+        <span>$</span>
+        <span>
+            <ul style="list-style-type: none " class="span" >
+                <li><input type="text"></li>
+                <li class="center">Dollars</li>
+            </ul>
+        </span>
+        <span class="period">.</span>
+        <span>
+        <ul style="list-style-type: none " class="span" >
+            <li><input type="text" size="5px"></li>
+            <li class="center">Cents</li>
+        </ul>
+        </span>
+        <h3>What features would you like to see in the new product.</h3>
+        <textarea name="" id="" cols="200" rows="10" ></textarea>
+        <table class="center">
+            <tr>
+                <td></td>
+                <td>Strongly Disagree</td>
+                <td>Disagree</td>
+                <td class="center"> Agree</td>
+                <td>Strongly Agree</td>
+            </tr>
+            <tr>
+                <td>Our products are priced fairly</td>
+                <td>
+                    <ul style="list-style-type: none">
+                        <li><input type="radio" name="sd"></li>
+                        <li class="center"> 1</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul style="list-style-type: none">
+                    <li><input type="radio" name="sd"></li>
+                    <li class="center"> 1</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul style="list-style-type: none">
+                        <li><input type="radio" name="sd"></li>
+                        <li > 1</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul style="list-style-type: none">
+                        <li><input type="radio" name="sd"></li>
+                        <li class="center"> 1</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>Our products are high quality</td>
+                <td>
+                    <ul style="list-style-type: none">
+                        <li><input type="radio" name="d"></li>
+                        <li class="center"> 1</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul style="list-style-type: none">
+                        <li><input type="radio"name="d"</li>
+                        <li class="center"> 1</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul style="list-style-type: none">
+                        <li><input type="radio"name="d"></li>
+                        <li class="center"> 1</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul style="list-style-type: none">
+                        <li><input type="radio"name="d"></li>
+                        <li class="center"> 1</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>You would recommend our product to a friend or coworker</td>
+                <td>
+                    <ul style="list-style-type: none">
+                        <li><input type="radio"name="a"></li>
+                        <li class="center"> 1</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul style="list-style-type: none">
+                        <li><input type="radio"name="a"></li>
+                        <li class="center"> 1</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul style="list-style-type: none">
+                        <li><input type="radio"name="a"></li>
+                        <li class="center"> 1</li>
+                    </ul>
+                </td><td>
+                <ul style="list-style-type: none">
+                    <li><input type="radio"name="a"></li>
+                    <li class="center"> 1</li>
+                </ul>
+            </td>
+            </tr>
+        </table>
+    </section>
+</body>
+</html>
