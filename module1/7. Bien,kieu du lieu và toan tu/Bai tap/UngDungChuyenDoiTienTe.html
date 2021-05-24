@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for="amount">Amount</label>
+<input type="text" id="amount">
+<label >From currency</label>
+<select  id="fromCurrency">
+    <option>VND</option>
+    <option>USD</option>
+
+</select>
+<lable>To currency</lable>
+<select  id="toCurrency">
+    <option >VND</option>
+    <option >USD</option>
+
+</select>
+<button onclick="myFunction()">Convert</button>
+<p id="demo"></p>
+    <script >
+        function myFunction() {
+            let amount=parseInt(document.getElementById("amount").value);
+            let fromCurrency=document.getElementById("fromCurrency").value;
+            let toCurrency=document.getElementById("toCurrency").value;
+            let result;
+            if (fromCurrency == "VND")
+            {
+                if (toCurrency == "USD")
+                {
+                    result = "Result: "+(amount/23000)+"USD";
+                }
+                else
+                {
+                    result = "Moi chon lai";
+                }
+            }
+            else if (fromCurrency == "USD")
+            {
+                if (toCurrency == "VND")
+                {
+                    result = "Result: "+(amount*23000)+"VND";
+                }
+                else
+                {
+                    result = "Moi chon lai";
+                }
+            }
+            document.getElementById("demo").innerText=result;
+        }
+    </script>
+</body>
+</html>
