@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="input"><input type="button"onclick="convert()"value="Tinh so ngay">
+<p id="result"></p>
+<script>
+
+    function convert() {
+        let result;
+        let thang=parseInt(document.getElementById("input").value);
+        switch (thang) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                result="Thang " + thang+ " co 31 ngay";
+                break;
+            case 2:
+                result="Thang " + thang+ " co 28 hoac 29 ngay";
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                result="Thang " + thang+ " co 30 ngay";
+                break;
+    }
+    document.getElementById("result").innerText=result;
+
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var sophut=parseInt(prompt("nhap so phut: ",''));
+    const phiCoDinh=25000;
+    var phi;
+    var tong;
+    if (sophut>200){
+        phi=(sophut-200)*200+150*400+50*600;
+    }else if (sophut>50){
+        phi=(sophut-50)*400+50*600;
+    }else {
+        phi=sophut*600;
+    }
+    tong=0.01*phi+phiCoDinh;
+    alert("tong so tien la: " + tong);
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    alert("Cho phuong trinh bac 2: ax^2+bx+c=0");
+    var soA=parseFloat(prompt('Nhap he so a',''));
+    var soB=parseFloat(prompt('Nhap he so b',''));
+    var soC=parseFloat(prompt('Nhap he so c',''));
+    var delta=soB*soB-4*soA*soC;
+    console.log(delta);
+    if(delta<0){
+        alert("Phuong trinh vo nghiem");
+    }else if (delta==0){
+        var nghiemKep=-soB/(2*soA);
+        alert("Phuong trinh co nghiem kep: "+nghiemKep)
+    }else {
+        var canDelta=Math.sqrt(delta);
+        var nghiem1= (-soB+canDelta)/(2*soA);
+        var nghiem2= (-soB-canDelta)/(2*soA);
+        alert("nghiem 1 la: "+nghiem1);
+        alert("nghiem 1 la: "+nghiem2);
+    }
+</script>
+</body>
+</html>

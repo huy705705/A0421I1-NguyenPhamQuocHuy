@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var soKW=parseInt(prompt("Nhap so KW: ",''));
+    var tong;
+    if (soKW<=0){
+        alert("So KW phai lon hon 0");
+    }else if (soKW<=50){
+        tong=soKW*480;
+        alert("Tong so tien la: "+tong);
+    }else if (soKW>=50&&soKW<=100){
+        tong=soKW*700;
+        alert("Tong so tien la: "+tong);
+    }else {
+        tong=soKW*900;
+        alert("Tong so tien la: "+tong);
+    }
+</script>
+</body>
+</html>

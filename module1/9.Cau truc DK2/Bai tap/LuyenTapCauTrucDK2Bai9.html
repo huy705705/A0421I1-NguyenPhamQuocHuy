@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var soA=parseFloat(prompt('Nhap so a: ',''));
+    var soB=parseFloat(prompt('Nhap so b: ',''));
+    var soC=parseFloat(prompt('Nhap so c: ',''));
+    var isDuong=soA>0&&soB>0&&soC>0
+    var isC=(soA+soB)>soC;
+    var isA=(soC+soB)>soA;
+    var isB=(soA+soC)>soB;
+    if (isDuong&&isA&&isB&&isC){
+        alert("la tam giac");
+    }else {
+        alert("khong la tam giac");
+    }
+</script>
+</body>
+</html>

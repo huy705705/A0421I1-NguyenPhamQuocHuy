@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img id="nobita" src="images/nobita.jpg" style="position:relative;left:0; top:0;" height="100" width="80"/>
+<input type="button" onclick="down()" value="down">
+<script>
+    function up() {
+        let element=document.getElementById('nobita');
+        element.style.top=parseInt(element.style.top)-5+"px";
+    }
+    function down() {
+        let element=document.getElementById('nobita');
+        element.style.top=parseInt(element.style.top)+5+"px";
+    }
+    function left() {
+        let element=document.getElementById('nobita');
+        element.style.left=parseInt(element.style.left)-5+"px";
+    }
+    function right() {
+        let element=document.getElementById('nobita');
+        element.style.right=parseInt(element.style.right)+5+"px";
+    }
+
+</script>
+</body>
+</html>

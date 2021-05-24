@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var baiKiemTra=parseFloat(prompt("Nhap diem bai kiem tra: ",''));
+    var baiGiuaKy=parseFloat(prompt("Nhap diem bai giua ky: ",''));
+    var baiCuoiKy=parseFloat(prompt("Nhap diem bai cuoi ky: ",''));
+    var diemTB=(baiKiemTra+baiGiuaKy*2+baiCuoiKy*4)/7;
+    alert(diemTB);
+    if (diemTB<5){
+        alert("hoc sinh yeu");
+    }else if (diemTB>=5&&diemTB<6.5){
+        alert("hoc sinh tb");
+    }else if (diemTB>=6.5&&diemTB<8){
+        alert("hoc sinh kha");
+    }else if(diemTB>=8){
+        alert("hoc sinh gioi");
+    }
+</script>
+
+</body>
+</html>

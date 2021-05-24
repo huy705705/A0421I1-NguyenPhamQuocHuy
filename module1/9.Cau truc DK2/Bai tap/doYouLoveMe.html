@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<p>DO you love me</p>
+<input type="button" value="Yes">
+<input type="button" onmouseover="move()" value="No" id="pic">
+<script>
+    let a;
+    let pic=document.getElementById("pic")
+    pic.style.position='relative';
+    function move() {
+        switch (a) {
+            case 1:
+                pic.style.left="200px";
+                pic.style.top='200px'
+                a=2;
+                break;
+            case 2:
+                pic.style.left="300px";
+                pic.style.top='300px'
+                a=3;
+                break;
+            case 3:
+                pic.style.left="400px";
+                pic.style.top='400px'
+                a=1;
+                break;
+
+        }
+    }
+    function innit() {
+        a=1;
+        pic.style.left="4px"
+        pic.style.top='0px'
+    }
+    window.onload=innit;
+</script>
+</body>
+</html>

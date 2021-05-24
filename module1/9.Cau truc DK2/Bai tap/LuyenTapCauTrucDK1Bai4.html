@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var a=parseInt(prompt("Nhap so a:",''));
+    var b=parseInt(prompt("Nhap so b:",''));
+    var c=parseInt(prompt("Nhap so c:",''));
+    var max=a;
+    if (a<b){
+        if (b<c){
+            alert(c+" la so lon nhat")
+        }else {
+            alert(b+" la so lon nhat")
+        }
+    }else if (a<c){
+        if (b<c){
+            alert(c+" la so lon nhat")
+        }else {
+            alert(b+" la so lon nhat")
+        }
+    }else if(a>b||a>c){
+        alert(a+" la so lon nhat")
+    }else {
+        alert("3 so bang nhau")
+    }
+</script>
+</body>
+</html>

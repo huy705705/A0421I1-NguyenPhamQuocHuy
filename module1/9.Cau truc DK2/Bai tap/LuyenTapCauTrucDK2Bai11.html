@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var thuNhap=parseInt(prompt('Nhap thu nhap: ',''))
+    var thue;
+    if(thuNhap<=0){
+        alert('Moi nhap lai: ');
+    }else if (thuNhap<=10000000){
+
+        alert("thue la: 0 VND");
+    }else if (thuNhap>10000000){
+        thue=thuNhap*0.2;
+        alert("thue la: "+thue+" VND");
+    }
+</script>
+</body>
+</html>

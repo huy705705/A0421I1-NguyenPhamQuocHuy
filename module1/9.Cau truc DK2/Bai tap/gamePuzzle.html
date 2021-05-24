@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .img{
+            width: 500px;
+            height: 200px;
+        }
+        .del{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<img src="./img/repeat1.jpg" alt="" class="img" onclick="change1() " id="pic1"><br>
+<img src="./img/repeat2.jpg" alt="" class="img" onclick="change2()" id="pic2"><br>
+<img src="./img/repeat3.jpg" alt="" class="img" onclick="change3()" id="pic3">
+<input type="button" value="1" id="num1" onclick="change1()" class="del">
+<input type="button" value="2" id="num2" onclick="change2()" class="del">
+<input type="button" value="3" id="num3" onclick="chang3()" class="del">
+<script>
+    function change1() {
+        // let mot=document.getElementById("pic1").value;
+        // console.log(typeof mot);
+        let img = document.getElementById("pic1");
+        // img.src="./img/repeat2.jpg";
+        let num1=document.getElementById("num1").value;
+
+
+        switch (num1) {
+            case "1":
+                document.getElementById("num1").value="2";
+                img.src="./img/repeat2.jpg";
+                break;
+            case "2":
+                document.getElementById("num1").value="3";
+                img.src="./img/repeat3.jpg";
+                break;
+            case "3":
+                document.getElementById("num1").value="1";
+                img.src="./img/repeat1.jpg";
+                break;
+        }
+    }
+    function change2() {
+        let img = document.getElementById("pic2");
+        // img.src="./img/repeat2.jpg";
+        let num1=document.getElementById("num2").value;
+
+
+        switch (num1) {
+            case "1":
+                document.getElementById("num2").value="2";
+                img.src="./img/repeat2.jpg";
+                break;
+            case "2":
+                document.getElementById("num2").value="3";
+                img.src="./img/repeat3.jpg";
+                break;
+            case "3":
+                document.getElementById("num2").value="1";
+                img.src="./img/repeat1.jpg";
+                break;
+        }
+    }
+    function change3() {
+        let img = document.getElementById("pic3");
+        // img.src="./img/repeat2.jpg";
+        let num1=document.getElementById("num3").value;
+
+
+        switch (num1) {
+            case "1":
+                document.getElementById("num3").value="2";
+                img.src="./img/repeat2.jpg";
+                break;
+            case "2":
+                document.getElementById("num3").value="3";
+                img.src="./img/repeat3.jpg";
+                break;
+            case "3":
+                document.getElementById("num3").value="1";
+                img.src="./img/repeat1.jpg";
+                break;
+        }
+    }
+</script>
+</body>
+</html>
