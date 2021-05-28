@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="demo"></p>
+
+<script>
+    in1();
+    function in1() {
+        let chuoi='';
+        for (var i=0;i<=4;i++){
+            chuoi+='x';
+            document.write(chuoi+"<br>");
+        }
+    }
+    in2();
+    function in2() {
+        let chuoi='xxxxx';
+        for (var i=0;i<=4;i++){
+            document.write(chuoi+"<br>");
+            chuoi=chuoi.substring(1);
+
+        }
+    }
+    in3()
+    function in3(){
+        let chuoi="&ensp;&ensp;&ensp;&ensp;x"
+        for(var i=0;i<=4;i++){
+            document.write((chuoi+'<br>'));
+            chuoi=chuoi.substring(6)
+            chuoi+='x'
+
+        }
+    }
+    in4()
+    function in4(){
+        let chuoi2='&ensp;';
+        let chuoi="xxxxx";
+        let chuoi3='';
+        for(var i=0;i<=4;i++){
+            if (i==0){
+                document.write((chuoi+'<br>'));
+
+            }else {
+                document.write(chuoi3+'<br>')
+            }
+            chuoi=chuoi.substring(1)
+            chuoi3=chuoi2+chuoi;
+            chuoi2=chuoi2+'&ensp;';
+
+        }
+    }
+    in5()
+    function in5() {
+        var chieudai=parseInt(prompt('Chieu dai'));
+        var chieurong=parseInt(prompt('Chieu rong'));
+        for (var i=0;i<chieudai;i++) {
+            let chuoi = 'x';
+            if (i == 0 || i == chieudai-1) {
+                for (var j = 0; j < chieurong-1; j++) {
+                    chuoi += 'x';
+                }
+                document.write(chuoi+"<br>")
+            } else {
+                for (var j = 0; j < chieurong-2; j++) {
+                    chuoi += '&ensp;';
+
+                }
+                document.write(chuoi+"x"+"<br>")
+            }
+        }
+    }
+
+
+
+
+
+</script>
+</body>
+</html>

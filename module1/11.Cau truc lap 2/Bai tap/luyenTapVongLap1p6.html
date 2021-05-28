@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var i=0;
+    var j=1;
+    var chuoi='';
+    var tong=0;
+    while (i<20){
+        if(j%7==0){
+            i++;
+            chuoi+=j+" ";
+            tong+=j;
+        }
+        j++;
+    }
+    document.write(chuoi)
+    document.write("<br>"+"tong: "+ tong);
+</script>
+</body>
+</html>

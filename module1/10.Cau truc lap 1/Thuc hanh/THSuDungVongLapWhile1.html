@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number=parseInt(prompt("Nhap so",''))
+    let total=0;
+    let chuoi='';
+    let the;
+    while (number !== -1){
+        total+=number;
+        the=number;
+        chuoi+= the.toString();
+        number=parseInt(prompt("Nhap so",''));
+        if(number !== -1){
+            chuoi+= "+";
+        }
+
+    }
+    alert(chuoi+ '='+ total);
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var dau=parseInt(prompt('Nhap dau:'));
+    var duoi=parseInt(prompt('Nhap duoi:'));
+
+    function random(min,max) {
+        return Math.floor(Math.random() * (max - min)) + min;
+    }
+    var a = random(dau, duoi);
+    alert(a);
+    var i=0;
+    while (i<=2){
+        var doan=parseInt(prompt("Nhap so ban doan: ",''));
+        if(doan==a){
+            alert('Ban chon dung');
+            break;
+        }else if (doan>a){
+            alert("Nen doan nho hon");
+            i++;
+        }else if (doan<a){
+            alert("nen doan lon hon");
+            i++;
+        }
+    }
+</script>
+</body>
+</html>

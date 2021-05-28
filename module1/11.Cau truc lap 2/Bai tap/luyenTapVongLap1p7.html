@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var chuoi='';
+    for(var i=1;i<=100;i++){
+        if(i%3==0&&i%5!=0){
+            chuoi+=" fizz "
+        }else if (i%5==0&&i%3!=0){
+            chuoi+=" buzz "
+        }else if (i%5==0&&i%3==0){
+            chuoi+=" fizzbuzz "
+        } else {
+            chuoi+=' '+i.toString()+' ';
+        }
+    }
+    document.write(chuoi)
+</script>
+</body>
+</html>

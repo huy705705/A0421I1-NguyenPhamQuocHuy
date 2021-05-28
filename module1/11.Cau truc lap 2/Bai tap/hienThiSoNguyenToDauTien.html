@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var number=parseInt(prompt('Nhap so n:',''))
+    let amount='';
+    if(number<2){
+        alert('khong co  so nao');
+    }else {
+        for (var i=2;i<=number;i++){
+            var flag=true;
+            for (var j=2;j<=Math.sqrt(i);j++){
+                if (i%j==0){
+                    flag=false;
+                }
+            }
+            if (flag==true){
+                amount+=i.toString()+" "
+            }
+        }
+        alert(amount);
+    }
+</script>
+</body>
+</html>
