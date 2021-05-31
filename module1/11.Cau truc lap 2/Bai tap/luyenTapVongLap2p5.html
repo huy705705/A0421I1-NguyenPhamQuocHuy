@@ -2,9 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 <body>
-
+    <script>
+        let gui=parseInt(prompt('Nhap tien gui'))
+        let lai=parseInt(prompt('Nhap lai suat'))
+        let thang=parseInt(prompt('Nhap so thang gui gui'))
+        let result;
+        result=gui*(Math.pow((1+lai),thang))
+        document.write(result)
+    </script>
 </body>
 </html>
