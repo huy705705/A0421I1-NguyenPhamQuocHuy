@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var soLuong=0;
+        let so=[];
+        let daonguoc=[];
+        
+        do{
+             soLuong=parseInt(prompt("Nhap so luong phan tu:"))
+             
+        }while(soLuong<=0||isNaN(soLuong))
+        // alert(soluong)
+
+        for(i=0;i<soLuong;i++){
+            so[i]=parseInt(prompt("nhap so thu "+(i+1)))
+        }
+        for(i=0;i<so.length;i++){
+            daonguoc.unshift(so[i])
+        }
+        alert(daonguoc)
+    </script>
+</body>
+</html>

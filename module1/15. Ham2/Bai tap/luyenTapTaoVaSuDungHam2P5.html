@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function min(so1,so2,so3) {
+            let min=so1;
+            if(so1>so2){
+                min=so2
+                if (so2>so3) {
+                    min=so3
+                }
+            }else if (so1>so3) {
+                min=so3
+                if (so3>so2) {
+                    min=so2
+                }
+            }
+            alert(min)
+        }
+        min(6,4,5)
+    </script>
+</body>
+</html>

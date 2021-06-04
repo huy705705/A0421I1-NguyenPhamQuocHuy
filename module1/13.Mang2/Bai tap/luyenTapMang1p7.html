@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var soLuong=0;
+        let so=[];
+        var count=0;
+        do{
+             soLuong=parseInt(prompt("Nhap so luong phan tu:"))
+             
+        }while(soLuong<=0||isNaN(soLuong))
+        for(i=0;i<soLuong;i++){
+            so[i]=parseInt(prompt("nhap so thu "+(i+1)))
+        }
+        var soCanTim=parseInt(prompt("Nhap so can tim:"))
+        for(i=0;i<so.length;i++){
+            if(so[i]==soCanTim){
+                
+                for(j=i;j<so.length-1;j++){
+                    so[j]=so[j+1]
+                }
+                
+            }
+        }
+        so.pop()
+        alert(so)
+        
+        
+        
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var tu=prompt("NHap tieng anh")
+
+        function tim(dau) {
+            let anh=['dog','cat','mouse','dolphin','shark','bee','sheep']
+            let viet=['cho','meo','chuot','ca heo','ca map','ong','cuu']
+            for (let index = 0; index < anh.length; index++) {
+                if(anh[index]==dau){
+                    alert(viet[index])
+                    break;
+                }else{
+                    alert("khong co")
+                    break;
+                }
+                
+            }
+        }
+        
+        tim(tu)
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let chuoi1=prompt("Nhap chuoi dau:")
+        let chuoi2=prompt("Nhap lai:")
+        let flag=true;
+        for(i=0;i<chuoi1.length;i++){
+            if(chuoi1[i]!=chuoi2[i]){
+                flag=false;
+            }
+        }
+        for(i=0;i<chuoi2.length;i++){
+            if(chuoi1[i]!=chuoi2[i]){
+                flag=false;
+            }
+        }
+        if(flag==true){
+            alert("Giong")
+        }else{
+            alert("Khong giong")
+        }
+    </script>
+</body>
+</html>

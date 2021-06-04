@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button"value="." onclick="change(this)" id="1"><input type="button"value="."id="2"onclick="change(this)"><input onclick="change(this)"type="button" value="."id="3"><br>
+    <input type="button"value="."onclick="change(this)" id="4"><input type="button"value="."onclick="change(this)" id="5"><input type="button" value="." onclick="change(this)" id="6"><br>
+    <input type="button"value="."onclick="change(this)" id="7"><input type="button"value="."onclick="change(this)" id="8"><input type="button" value="." onclick="change(this)" id="9"><br>
+    
+    <input type="text" id="input">
+    <button onclick="get()" value="asd">asd</button>
+    <script>
+        let kieu=document.getElementById('input')
+        var kieu2;
+        
+        function get(){
+        
+            
+            kieu2=kieu.value
+            console.log(kieu2)
+        }
+        
+        
+
+        function change(el){
+        //    console.log(el)
+           
+        //    console.log(el.value)
+           
+        //    console.log(mot)
+
+        //    let kieu2='x';
+        let mot=document.getElementById('1')
+        let hai=document.getElementById('2')
+        let ba=document.getElementById('3')
+        let bon=document.getElementById('4')
+        let nam=document.getElementById('5')
+        let sau=document.getElementById('6')
+        let bay=document.getElementById('7')
+        let tam=document.getElementById('8')
+        let chin=document.getElementById('9')
+            if(el==mot&&kieu2=='x'){
+                el.value='x'
+                
+            }else if(el==mot&&kieu2=='o'){
+                el.value='o'
+            }else if(el==hai&&kieu2=='x'){
+                el.value='x'
+            }else if(el==hai&&kieu2=='o'){
+                el.value='o'
+            }else if(el==ba&&kieu2=='x'){
+                el.value='x'
+            }else if(el==ba&&kieu2=='o'){
+                el.value='o'
+            }else if(el==bon&&kieu2=='x'){
+                el.value='x'
+            }else if(el==bon&&kieu2=='o'){
+                el.value='o'
+            }else if(el==nam&&kieu2=='x'){
+                el.value='x'
+            }else if(el==nam&&kieu2=='o'){
+                el.value='o'
+            }else if(el==sau&&kieu2=='x'){
+                el.value='x'
+            }else if(el==sau&&kieu2=='o'){
+                el.value='o'
+            }else if(el==bay&&kieu2=='x'){
+                el.value='x'
+            }else if(el==bay&&kieu2=='o'){
+                el.value='o'
+            }else if(el==tam&&kieu2=='x'){
+                el.value='x'
+            }else if(el==tam&&kieu2=='o'){
+                el.value='o'
+            }else if(el==chin&&kieu2=='x'){
+                el.value='x'
+            }else if(el==chin&&kieu2=='o'){
+                el.value='o'
+            }
+            // if(mot.value==hai.value==ba.value=='x'){
+            //     alert("x thang")
+            // }
+                // console.log(mot.value==hai.value==ba.value=='x')
+                let isMotX=mot.value=='x'
+                let isHaiX=hai.value=='x'
+                let isBaX=ba.value=='x'
+                let isBonX=bon.value=='x'
+                let isNamX=nam.value=='x'
+                let isSauX=sau.value=='x'
+                let isBayX=bay.value=='x'
+                let isTamX=tam.value=='x'
+                let isChinX=chin.value=='x'
+                let isMoto=mot.value=='o'
+                let isHaio=hai.value=='o'
+                let isBao=ba.value=='o'
+                let isBono=bon.value=='o'
+                let isNamo=nam.value=='o'
+                let isSauo=sau.value=='o'
+                let isBayo=bay.value=='o'
+                let isTamo=tam.value=='o'
+                let isChino=chin.value=='o'
+
+                console.log(isMotX+isHaiX)
+                if(isHaiX&&isMotX&&isBaX){
+                    alert('x thang')
+                }else if(isNamX&&isSauX&&isBonX){
+                    alert('x thang')
+                }else if(isBayX&&isTamX&&isChinX){
+                    alert('x thang')
+                }else if(isMotX&&isBonX&&isBayX){
+                    alert('x thang')
+                }else if(isHaiX&&isNamX&&isTamX){
+                    alert('x thang')
+                }else if(isBaX&&isSauX&&isChinX){
+                    alert('x thang')
+                }else if(isMotX&&isNamX&&isChinX){
+                    alert('x thang')
+                }else if(isBaX&&isNamX&&isBayX){
+                    alert('x thang')
+                }
+                else if(isHaio&&isMoto&&isBao){
+                    alert('o thang')
+                }else if(isNamo&&isSauo&&isBono){
+                    alert('o thang')
+                }else if(isBayo&&isTamo&&isChino){
+                    alert('o thang')
+                }else if(isMoto&&isBono&&isBayo){
+                    alert('o thang')
+                }else if(isHaio&&isNamo&&isTamo){
+                    alert('o thang')
+                }else if(isBao&&isSauo&&isChino){
+                    alert('o thang')
+                }else if(isMoto&&isNamo&&isChino){
+                    alert('o thang')
+                }else if(isBao&&isNamo&&isBayo){
+                    alert('o thang')
+                }
+        }
+    </script>
+</body>
+</html>

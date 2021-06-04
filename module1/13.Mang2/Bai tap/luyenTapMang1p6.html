@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var soluong=0;
+        let so=[];
+        var count=0;
+        do{
+             soluong=parseInt(prompt("Nhap so luong phan tu:"))
+             
+        }while(soluong<=0||isNaN(soluong))
+        // alert(soluong)
+
+        for(i=0;i<soluong;i++){
+            so[i]=parseInt(prompt("nhap so thu "+(i+1)))
+        }
+        var soCanTim=parseInt(prompt("Nhap so can tim:"))
+        for(i=0;i<so.length;i++){
+            if(so[i]==soCanTim){
+                count++;
+            }
+        }
+        console.log(count)
+        console.log(soluong)
+        if(count==1){
+            alert("V is in the array")
+        }
+        else{
+            alert("V is not in the array")
+        }
+        
+    </script>
+</body>
+</html>
