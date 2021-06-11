@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var number=parseInt(prompt('Nhap so n:',''))
+        let amount='';
+        function SNT(number){
+            if(number<2){
+                alert('khong phai SNT');
+            }else {
+                var flag=true;
+                for (var j=2;j<=Math.sqrt(number);j++){
+                        if (number%j==0){
+                            flag=false;
+                        }
+                    }
+                    if (flag==true){
+                        alert("la SNT")
+                    }else{
+                        alert("khong phai SNT")
+                    }
+            }
+        }
+        SNT(number);
+        
+    </script>
+</body>
+</html>

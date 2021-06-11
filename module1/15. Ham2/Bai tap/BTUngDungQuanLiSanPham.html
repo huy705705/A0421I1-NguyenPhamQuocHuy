@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+         <meta charset="UTF-8">
+         <title>bang</title>
+         
+     </head>
+     
+     <body>
+     <p>------------------------</p>
+            <script>
+                arr=['dog','cat','horse','cow','sheep']
+                function display(){
+                    document.body.innerHTML=''
+
+                    document.write('<input type="text" id="add"><input type="button" value="add" onclick="addProduct()" >')
+                    document.write('<table>')
+                        for(i=0;i<arr.length;i++){
+                            document.write('<tr>')
+                                for(j=0;j<1;j++){
+                                    document.write('<td>'+arr[i]+'</td>')
+                                    document.write('<td><input type="button" value="edit" onclick="edit('+i+')"></td>')
+                                    document.write('<td><input type="button" value="delete" onclick="deleteProduct('+i+')"></td>')
+                                }
+                            document.write('</tr>')
+                    }
+                    document.write('</table>')
+                }
+                display();
+                function addProduct(){                    
+                    let product=document.getElementById('add').value
+                    if (arr.indexOf(product)==-1) {
+                        arr.push(product)
+                        display();
+                    }else{
+                        alert("trung roi.nhap lai")
+                    }
+                }
+                function deleteProduct(index){
+                    arr.splice(index,1)
+                    display()
+                }
+                function edit(index){
+                    document.body.innerHTML=''
+                    document.write('<input type="text" id="add"><input type="button" value="add" onclick="addProduct()" >')
+                    document.write('<table>')
+                    for(i=0;i<arr.length;i++){
+                        document.write('<tr>')
+
+                        if(index!=i){
+                        document.write('<td> '+arr[i]+'</td>')
+                        document.write('<td> <input type="button" id="edit" value="edit" onclick="edit('+i+')" ></td>')
+                        document.write('<td><input type="button" value="delete" onclick="deleteProduct('+i+')"></td>')
+
+                        }else if(index==i){
+                            document.write('<td><input type="text" id="update"  value="'+arr[index]+'" >   </td>')
+                            document.write('<td><input type="button" id="edit" value="update" onclick="update('+i+')"></td>')
+                            document.write('<td><input type="button" value="delete" onclick="deleteProduct('+i+')"></td>')
+                            
+                        }
+                        document.write('</tr>')
+
+                    }
+                    document.write('</table>')
+
+                }
+                function update(index){
+                    var product=  document.getElementById("update").value
+                    document.body.innerHTML=''
+                    document.write('<input type="text" id="add"><input type="button" value="add" onclick="addProduct()" >')
+                    document.write('<table>')
+                    for(i=0;i<arr.length;i++){
+                        document.write('<tr>')
+                        if(index!=i){
+                        document.write('<td> '+arr[i]+'</td>')
+                        document.write('<td><input type="button" id="edit" value="edit" onclick="edit('+i+')"></td>')
+                        document.write('<td><input type="button" value="delete" onclick="deleteProduct('+i+')"></td>')
+                        }else if(index==i){
+                            arr.splice(index,1,product)
+                            document.write('<td>'+product+'</td>')
+                            document.write('<td><input type="button" id="edit" value="edit" onclick="edit('+i+')"></td>')
+                            document.write('<td><input type="button" value="delete" onclick="deleteProduct('+i+')"></td>')
+                            
+                        }
+                        document.write('</tr>')
+                    }
+                    document.write('</table>')
+                }
+            </script>
+     </body>
+</html>

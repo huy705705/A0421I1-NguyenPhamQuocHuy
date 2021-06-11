@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Temperature{
+            constructor (doC){
+                this.doC=doC
+            }
+            getDoC(){
+                return this.doC
+            }
+            setDoC(){
+                this.doC=doC
+            }
+            getDoF(){
+                return this.doC*(9/5)+32
+            }
+            getDoK(){
+                return this.doC+273
+            }
+        }
+        let doC= new Temperature(13)
+        let doF=doC.getDoF();
+        let doK=doC.getDoK();
+        alert("do f: "+doF+"\n"+"do k: "+doK)
+        // alert(doC.getDoC())
+    </script>
+</body>
+</html>

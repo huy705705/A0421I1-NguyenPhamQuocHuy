@@ -11,15 +11,20 @@
         let viet=["cho","meo","khi","heo"]
         let anh=["dog","cat","monkey","pig"]
         let tu=prompt('tieng viet:')
+        let flag=false;
+        let temp=0;
         for(i=0;i<viet.length;i++){
             if(viet[i]==tu){
-                document.write(anh[i])
-                break;
-            }else{
-                document.write("KHong tim thay")
-                break;
+                flag=true;
+                temp=i;
             }
         }
+        if(flag==true){
+            document.write(anh[temp])
+        }else{
+            document.write("khong tim thay")
+        }
+        
     </script>
 </body>
 </html>

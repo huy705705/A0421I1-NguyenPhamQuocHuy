@@ -5,6 +5,27 @@
     <title>Title</title>
 </head>
 <body>
+<script>
+    function in5() {
+        var chieudai=parseInt(prompt('Chieu dai'));
+        var chieurong=parseInt(prompt('Chieu rong'));
+        for (var i=0;i<chieudai;i++) {
+            let chuoi = 'x';
+            if (i == 0 || i == chieudai-1) {
+                for (var j = 0; j < chieurong-1; j++) {
+                    chuoi += 'x';
+                }
+                document.write(chuoi+"<br>")
+            } else {
+                for (var j = 0; j < chieurong-2; j++) {
+                    chuoi += '&ensp;';
 
+                }
+                document.write(chuoi+"x"+"<br>")
+            }
+        }
+    }
+    in5();
+</script>
 </body>
 </html>

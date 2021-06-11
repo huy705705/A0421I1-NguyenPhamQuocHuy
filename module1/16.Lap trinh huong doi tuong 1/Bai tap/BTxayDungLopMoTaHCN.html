@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas  id="myCanvas">ád</canvas>
+    <script>
+        let Rectangle= function(width,height){
+            this.height=height;
+            this.width=width;
+            this.getArea= function(){
+                return height*width
+            }
+            this.getC=function(){
+                return (height+width)*2
+            }
+            this.getRec=function(){
+                var c = document.getElementById("myCanvas");
+                var ctx = c.getContext("2d");
+                ctx.fillStyle = "#FF0000";
+                return ctx.fillRect(0,0,this.width,this.height);
+            }
+        }
+        let rectangle= new Rectangle(150,75)
+        let area=rectangle.getArea();
+        let c=rectangle.getC();
+        let rec=rectangle.getRec();
+        document.write(rec)
+    </script>
+</body>
+</html>
