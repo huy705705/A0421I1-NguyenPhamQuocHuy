@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Rat{
+            constructor(name,weight,speed,status){
+                this.name=name
+                this.weight=weight
+                this.speed=speed
+                this.status=status;
+            }
+            talk(speech){
+                console.log("keu: "+speech)
+            }
+        }
+        class Cat{
+            constructor(name,weight,speed){
+                this.name=name
+                this.weight=weight
+                this.speed=speed
+                
+            }
+            talk(speech){
+                console.log("keu: "+speech)
+            }
+            catchRat(rat){
+                
+                if(this.speed > rat.speed){
+                    console.log("bat duoc")
+                    return true
+                }else{
+                    console.log("khong bat duoc")
+                    return false
+                }
+            }
+            eatRat(rat){
+                if(rat.status==true&&this.catchRat(rat)){
+                    console.log("an duoc")
+
+                }else if(rat.status==false&&this.catchRat(rat)){
+                    console.log("khong an duoc")
+                    
+                }
+            }
+        }
+        var rat1= new Rat('jerry',1,100,false)
+        var cat1=new Cat('toom',2,800)
+        // cat1.catchRat(rat1)
+        cat1.eatRat(rat1)
+    </script>
+</body>
+</html>

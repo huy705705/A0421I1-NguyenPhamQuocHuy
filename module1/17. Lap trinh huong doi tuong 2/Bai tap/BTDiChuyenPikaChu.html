@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <img src="" alt="" style="top: ; bottom: 100px;"> -->
+    <div id="game"></div>
+    <script>
+        /**
+ * Created by nhatnk on 4/26/17.
+ */
+
+        function Hero(image, top, left, size){
+        this.image = image;
+        this.top = top;
+        this.left = left;
+        this.size = size;
+
+        this.getHeroElement = function(){
+            // return '<img width="'+ this.size + '"' +
+            // ' height="'+ this.size + '"' +
+            // ' src="' + this.image +'"' +
+            // ' style="top: '+this.top+'px; left:'+this.left+'px;position:absolute;" />';
+            return `<img width='${this.size}' height='${this.size}'
+             src='${this.image}' style='top:${this.top}px;left:${this.left}px;
+             position:absolute'/>`
+        }
+
+        this.moveRight = function(){
+            this.left += 20;
+            // console.log('ok: ' + this.left);
+        }
+        this.moveDown = function(){
+            this.top +=20;
+        }
+        this.moveLeft = function(){
+            this.left -=20;
+        }
+        this.moveUp=function(){
+            this.top -=20;
+            console.log('ok: ' + this.top);
+
+        }
+        }
+
+        var hero = new Hero('./img/pikachu.png', 20, 30, 200);
+
+        function start(){
+        if(hero.left < window.innerWidth - hero.size&&hero.top <21){
+            // console.log(window.innerWidth- hero.size)
+            // console.log("left:   "+hero.left)
+            hero.moveRight();
+        }else if(hero.left >= window.innerWidth - hero.size&&hero.top <window.innerHeight - hero.size){
+            hero.moveDown();
+        }else if(hero.left >30 &&hero.top >=window.innerHeight - hero.size){
+            console.log("left :   "+ hero.left)
+            // console.log(window.innerWidth -hero.size)
+            hero.moveLeft();
+        }else if(hero.left <= 30 && hero.top > 21){
+            hero.moveUp();
+            console.log('123')
+        }
+        document.getElementById('game').innerHTML = hero.getHeroElement();
+        setTimeout(start, 20)
+        }
+
+        start();
+    </script>
+</body>
+</html>

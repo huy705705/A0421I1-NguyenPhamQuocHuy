@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Apple{
+            constructor(){
+                this.weight=3
+            }
+            decrease(){
+                if(this.isEmpty()){
+                    alert("Táo đã hết mất rồi")
+
+                }else{
+                    this.weight--;
+                }
+            }
+            isEmpty(){
+                if(this.weight<=0){
+                    return true
+                }else{
+                    return false
+                }
+            }
+        }
+        class Human{
+            constructor(name,weight){
+                this.name=name
+                this.weight=weight
+                
+            }     
+            checkApple(apple){
+                
+                // if(this.apple.isEmpty()){
+                //     return true
+                // }else{
+                //     return false
+                // }
+                // console.log(this.apple.isEmpty())
+                return !apple.isEmpty();
+
+            }
+            eatApple(apple){
+                if(this.checkApple(apple)){
+                    apple.decrease()
+                    this.weight++
+                }else{
+                    console.log("het tao")
+                }
+            }
+            
+        }
+        let adam = new Human("Adam", 75);
+        let eva = new Human("Eva", 60);
+        let apple = new Apple;
+        adam.eatApple(apple);
+        eva.eatApple(apple);
+        console.log(apple.weight)
+        console.log(adam.weight)
+        console.log(eva.weight)
+        
+    </script>
+</body>
+</html>
