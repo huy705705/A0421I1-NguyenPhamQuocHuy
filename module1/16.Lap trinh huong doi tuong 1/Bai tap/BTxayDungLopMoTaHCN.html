@@ -9,16 +9,35 @@
 <body>
     <canvas  id="myCanvas">ád</canvas>
     <script>
-        let Rectangle= function(width,height){
-            this.height=height;
-            this.width=width;
-            this.getArea= function(){
-                return height*width
+        // let Rectangle= function(width,height){
+        //     this.height=height;
+        //     this.width=width;
+        //     this.getArea= function(){
+        //         return height*width
+        //     }
+        //     this.getC=function(){
+        //         return (height+width)*2
+        //     }
+        //     this.getRec=function(){
+        //         var c = document.getElementById("myCanvas");
+        //         var ctx = c.getContext("2d");
+        //         ctx.fillStyle = "#FF0000";
+        //         return ctx.fillRect(0,0,this.width,this.height);
+        //     }
+        // }
+        class Rectangle{
+            constructor(height,width){
+                this.height=height;
+                this.width=width;
             }
-            this.getC=function(){
-                return (height+width)*2
+            getArea(){
+                return this.height*this.width
             }
-            this.getRec=function(){
+            getC(){
+                return (this.height+this.width)*2
+
+            }
+            getRec(){
                 var c = document.getElementById("myCanvas");
                 var ctx = c.getContext("2d");
                 ctx.fillStyle = "#FF0000";

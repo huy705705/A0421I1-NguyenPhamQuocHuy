@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <body>
+    <!-- <img src="./img/1200px-VTV1_logo_2013_final.svg.png" alt="ád"> -->
     <script>
         class Remote{
             
@@ -23,8 +24,32 @@
                 this.volume=volume
                 this.status=status
             }
+            display(){
+                switch (this.channel) {
+                    case  1 :{
+                        document.body.innerHTML=''
+                        document.write(`<img src="./img/1200px-VTV1_logo_2013_final.svg.png" alt="">`)
+                        break;
+                    }
+                    case  3 :{
+                        document.body.innerHTML=''
+                        document.write(`<img src="./img/1200px-VTV3_logo_2013_final.svg.png" alt="">`)
+                        break;
+                    }
+                }
+            }
+            
+            
         }
         var tivi1=new Tivi(1,1,true)
+        var remote=new Remote
+        remote.changeChannelTivi(tivi1,3)
+        tivi1.display()
+        remote.changeChannelTivi(tivi1,1)
+        remote.changeChannelTivi(tivi1,3)
+
+        tivi1.display()
+
     </script>
 </body>
 </html>

@@ -13,10 +13,15 @@
                 this.lamp=lamp
             }
             switchOn(){
+                this.status=true
                 this.lamp.turnOn()
+                console.log('status: '+ this.status)
+
             }
             switchOff(){
                 this.lamp.turnOff()
+                this.status=false
+                console.log('status: '+ this.status)
 
             }
         }
@@ -37,6 +42,7 @@
         var switch1=new SwitchButton
         switch1.connectToLamp(elec1)
         switch1.switchOn()
+        switch1.switchOff()
         // switch1.switchOff()
         console.log(elec1.status)
 
