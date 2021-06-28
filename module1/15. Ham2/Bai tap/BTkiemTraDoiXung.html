@@ -10,9 +10,8 @@
     <script>
         let chuoi=prompt()
         chuoi=chuoi.split("")
-        // console.log(chuoi.split(''))
-        console.log(chuoi)
-        for(i=0;i<(chuoi.length)/2;i++){
+        function kiemTraDoiXung(chuoi){
+            for(i=0;i<(chuoi.length)/2;i++){
             if(chuoi[i]!=chuoi[chuoi.length-1-i]){
                 alert("khong doi xung")
                 break;
@@ -21,6 +20,8 @@
                 break;
             }
         }
+        }
+        kiemTraDoiXung(chuoi)
     </script>
 </body>
 </html>
