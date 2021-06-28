@@ -11,15 +11,17 @@
         let chuoi=prompt()
         chuoi=chuoi.split("")
         function kiemTraDoiXung(chuoi){
+            var flag=true
             for(i=0;i<(chuoi.length)/2;i++){
-            if(chuoi[i]!=chuoi[chuoi.length-1-i]){
-                alert("khong doi xung")
-                break;
-            }else{
-                alert("Doi xung")
-                break;
+                if(chuoi[i]!=chuoi[chuoi.length-1-i]){
+                    flag=false
+                }
             }
-        }
+            if(flag==true){
+                alert('doi xung')
+            }else{
+                alert('khong doi xung')
+            }
         }
         kiemTraDoiXung(chuoi)
     </script>
