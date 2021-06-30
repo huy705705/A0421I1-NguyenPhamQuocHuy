@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var soLuongM=parseInt(prompt('Nhap so phan tu: '))
+        var soLuongN=parseInt(prompt('Nhap so phan tu: '))
+        var arr= new Array(soLuongM)
+        var count=0
+        for(i=0;i<soLuongM;i++){
+            arr[i]=new Array(soLuongN)
+            for(j=0;j<soLuongN;j++){
+                arr[i][j]=parseInt(prompt(`Phan tu thu [${i}][${j}]` ))
+            }
+        }
+        function kiemTra(max,min,number){
+            if(max<number){
+                max=number
+            }else if(min>number){
+                min=number
+            }
+            return [max,min]
+        }
+        var max=arr[0][0]
+        var min=arr[0][0]
+        for(i=0;i<soLuongM;i++){
+            for(j=0;j<soLuongN;j++){
+                var result=kiemTra(max,min,arr[i][j])
+            }
+        }
+        console.log("max: "+result[0])
+        console.log("min: "+result[1])
+        console.log(result)
+        
+        
+
+
+
+
+
+    </script>
+</body>
+</html>

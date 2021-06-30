@@ -8,7 +8,35 @@
 </head>
 <body>
     <script>
-        
+        var string='  tRuong    TaN   HAI   '
+        var str=string.trim().split('')
+        for(i=0;i<str.length-1;i++){
+            var isFirstChar=isNaN(str[i])
+            var isSecondChar=isNaN(str[i+1])
+            
+            var isUpperCase=!isFirstChar&&isSecondChar
+            var isLastLowerCase=isFirstChar&&!isSecondChar
+            var isMidLowerCase=isFirstChar&&isSecondChar
+            var isSpace=!isFirstChar&&!isSecondChar
+            if(i==0){
+                str[i]=str[i].toLocaleUpperCase()
+                if(isMidLowerCase){
+                    str[i+1]=str[i+1].toLowerCase()
+                }
+            }else if(i!=0){
+                if(isUpperCase){
+                    str[i+1]=str[i+1].toUpperCase()
+                }else if(isLastLowerCase){
+                    str[i]=str[i].toLowerCase()
+                }else if(isMidLowerCase){
+                    str[i+1]=str[i+1].toLowerCase()
+                }else if(isSpace){
+                    str[i+1]=''
+                }
+            }
+        }
+        console.log(str.join(''))
+       
     </script>
 </body>
 </html>
