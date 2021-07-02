@@ -16,15 +16,15 @@
             }else {
                 var flag=true;
                 for (var j=2;j<=Math.sqrt(number);j++){
-                        if (number%j==0){
-                            flag=false;
-                        }
+                    if (number%j==0){
+                        flag=false;
                     }
-                    if (flag==true){
-                        alert("la SNT")
-                    }else{
-                        alert("khong phai SNT")
-                    }
+                }
+                if (flag==true){
+                    alert("la SNT")
+                }else{
+                    alert("khong phai SNT")
+                }
             }
         }
         SNT(number);
