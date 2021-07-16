@@ -9,7 +9,9 @@
 <body>
     <table>
         <tr>
-            <td><input type="button" value="xac nhanh" onclick="xacNhan()"></td>
+            <td><input type="button" value="xac nhanh" onclick="xacNhan()" placeholder="so luong"></td>
+            <td></td>
+            <th></th>
         </tr>
         <tr></tr>
     </table>
@@ -18,25 +20,29 @@
             document.body.innerHTML=''
             var result=`<table border='1'>`
                 result+=`<tr>`
-                result+=`<td>1</td><td>cafe</td><td>1000</td><td><input type="text" id="1"></td>`
+                result+=`<th>STT</th> <th>Do uong</th><th>Gia</th><th>So luong</th>`
                 result+=`</tr>`
                 result+=`<tr>`
-                result+=`<td>2</td><td>cam vat</td><td>2000</td><td><input type="text" id="2"></td>`
+                result+=`<td>1</td><td>cafe</td><td>1000d</td><td><input type="text" id="1" ></td>`
                 result+=`</tr>`
                 result+=`<tr>`
-                result+=`<td>3</td><td>nuoc ep ca rot</td><td>3000</td><td><input type="text" id="3"></td>`
+                result+=`<td>2</td><td>cam vat</td><td>2000d</td><td><input type="text" id="2"></td>`
                 result+=`</tr>`
                 result+=`<tr>`
-                result+=`<td>4</td><td>nuoc ep ca chua</td><td>4000</td><td><input type="text" id="4"></td>`
+                result+=`<td>3</td><td>nuoc ep ca rot</td><td>3000d</td><td><input type="text" id="3"></td>`
                 result+=`</tr>`
                 result+=`<tr>`
-                result+=`<td>5</td><td>nuoc loc</td><td>5000</td><td><input type="text" id="5"></td>`
+                result+=`<td>4</td><td>nuoc ep ca chua</td><td>4000d</td><td><input type="text" id="4"></td>`
                 result+=`</tr>`
                 result+=`<tr>`
-                result+=`<td>6</td><td>nuoc dua</td><td>6000</td><td><input type="text" id="6"></td>`
+                result+=`<td>5</td><td>nuoc loc</td><td>5000d</td><td><input type="text" id="5"></td>`
+                result+=`</tr>`
+                result+=`<tr>`
+                result+=`<td>6</td><td>nuoc dua</td><td>6000d</td><td><input type="text" id="6"></td>`
                 result+=`</tr>`
                 result+=`</table>`
-                result+=`<br><input type="button" value="xac nhan" onclick="xacNhan()">`
+                result+=`<br><input type="button" value="Xac nhan" onclick="xacNhan()">`
+                result+=`<br><br><input type="button" value="Huy" onclick="huy()">`
             document.write(result)
         }
         displayProduct()
@@ -49,6 +55,9 @@
             var product6=document.getElementById('6').value
             var tong=1000*product1+2000*product2+3000*product3+4000*product4+5000*product5+6000*product6
             alert("tong: "+tong)
+        }
+        function huy(){
+            displayProduct()
         }
     </script>
 </body>
