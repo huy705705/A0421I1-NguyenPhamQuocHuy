@@ -1,7 +1,7 @@
 package b3_mang_va_phuong_thuc_java.bai_tap;
 import java.util.Scanner;
 
-public class _3 {
+public class _3MerArrray {
     public static void main(String[] args) {
         Scanner scanner=new Scanner(System.in);
         int []arr1;

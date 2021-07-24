@@ -1,6 +1,6 @@
 package b3_mang_va_phuong_thuc_java.bai_tap;
 import java.util.Scanner;
-public class _4 {
+public class _4FindMax {
     public static void main(String[] args) {
         Scanner scanner=new Scanner(System.in);
         int size1;

@@ -1,6 +1,6 @@
 package b3_mang_va_phuong_thuc_java.thuc_hanh;
 import java.util.Scanner;
-public class _5 {
+public class _5FindMin {
     public static void main(String[] args) {
         Scanner scanner=new Scanner(System.in);
         int [] arr=new int [20];

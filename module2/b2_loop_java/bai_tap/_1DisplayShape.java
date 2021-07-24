@@ -1,6 +1,6 @@
 package b2_loop_java.bai_tap;
 import java.util.Scanner;
-public class _1 {
+public class _1DisplayShape {
     public static void main(String[] args) {
         Scanner scanner=new Scanner(System.in);
         System.out.println("Nhap chieu dai");

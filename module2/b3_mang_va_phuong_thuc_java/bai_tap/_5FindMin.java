@@ -1,31 +1,30 @@
 package b3_mang_va_phuong_thuc_java.bai_tap;
 import java.util.Scanner;
-
-public class _6 {
+public class _5FindMin {
     public static void main(String[] args) {
         Scanner scanner=new Scanner(System.in);
-        double []arr1;
+        int []arr1;
         int size1;
         do{
             System.out.println("Nhap so luong phan tu 1: ");
             size1=scanner.nextInt();
-            if(size1>30){
-                System.out.println("Mang phai nho hon 31 phan tu , moi nhap lai ");
+            if(size1>20){
+                System.out.println("Mang phai nho hon 21 phan tu , moi nhap lai ");
             }
-        }while(size1>30);
-        arr1=new double[size1];
+        }while(size1>20);
+        arr1=new int[size1];
         for(int i=0;i<size1;i++){
             arr1[i]=scanner.nextInt();
         }
         for(int i=0;i<size1;i++){
-            System.out.println("Mang moi la: "+arr1[i]);
+            System.out.println(arr1[i]);
         }
-        int count=0;
-        for(int i=0;i<size1;i++){
-            if(arr1[i]>5.0){
-                count++;
+        int min=0;
+        for (int i=0;i<size1;i++){
+            if(arr1[min]>arr1[i]){
+                min=i;
             }
         }
-        System.out.println("So sinh vien dau la: "+count);
+        System.out.println("Phan tu nho nhat la: "+arr1[min]+" o vi tri: "+arr1[min]);
     }
 }

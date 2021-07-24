@@ -1,6 +1,6 @@
 package b2_loop_java.thuc_hanh;
 import java.util.Scanner;
-public class _3 {
+public class _3GreatestCommonDivisor {
     public static void main(String[] args) {
         Scanner scanner=new Scanner(System.in);
         System.out.println("nhap so a: ");

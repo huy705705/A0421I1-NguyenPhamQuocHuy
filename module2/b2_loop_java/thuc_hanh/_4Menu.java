@@ -1,6 +1,6 @@
 package b2_loop_java.thuc_hanh;
 import java.util.Scanner;
-public class _4 {
+public class _4Menu {
     public static void main(String[] args) {
         Scanner scanner=new Scanner(System.in);
         int choice=-1;

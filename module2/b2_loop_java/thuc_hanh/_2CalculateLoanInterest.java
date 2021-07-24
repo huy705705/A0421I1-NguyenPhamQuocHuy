@@ -1,6 +1,6 @@
 package b2_loop_java.thuc_hanh;
 import java.util.Scanner;
-public class _2 {
+public class _2CalculateLoanInterest {
 
 
     public static void main(String[] args) {

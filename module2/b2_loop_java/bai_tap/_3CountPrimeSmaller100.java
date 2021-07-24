@@ -2,7 +2,7 @@ package b2_loop_java.bai_tap;
 
 import java.util.Scanner;
 
-public class _3 {
+public class _3CountPrimeSmaller100 {
     public static void main(String[] args) {
         Scanner scanner=new Scanner(System.in);
         for(int i=1;i<100;i++){

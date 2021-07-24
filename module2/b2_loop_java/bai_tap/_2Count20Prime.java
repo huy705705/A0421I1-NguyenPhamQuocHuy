@@ -2,7 +2,7 @@ package b2_loop_java.bai_tap;
 
 import java.util.Scanner;
 
-public class _2 {
+public class _2Count20Prime {
     public static void main(String[] args) {
         Scanner scanner=new Scanner(System.in);
         int[] arr= new int[21];

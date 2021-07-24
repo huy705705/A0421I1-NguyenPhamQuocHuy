@@ -1,6 +1,6 @@
 package b3_mang_va_phuong_thuc_java.thuc_hanh;
 import java.util.Scanner;
-public class _3 {
+public class _3FindMax {
     public static void main(String[] args) {
         Scanner scanner =new Scanner(System.in);
         int number;
