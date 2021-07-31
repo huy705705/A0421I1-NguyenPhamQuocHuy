@@ -2,7 +2,7 @@ package b4_lop_va_doi_tuong_trong_java.thuc_hanh.Rectangle;
 
 import java.util.Scanner;
 
-public class _1 {
+public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter the width:");

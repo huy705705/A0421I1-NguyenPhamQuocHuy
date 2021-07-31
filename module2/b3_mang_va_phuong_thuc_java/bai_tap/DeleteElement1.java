@@ -2,7 +2,7 @@ package b3_mang_va_phuong_thuc_java.bai_tap;
 
 import java.util.Scanner;
 
-public class _1DeleteElement {
+public class DeleteElement1 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int[] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9};

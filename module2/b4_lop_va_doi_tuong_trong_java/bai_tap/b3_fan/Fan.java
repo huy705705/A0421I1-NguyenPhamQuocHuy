@@ -1,4 +1,4 @@
-package b4_lop_va_doi_tuong_trong_java.bai_tap._3_fan;
+package b4_lop_va_doi_tuong_trong_java.bai_tap.b3_fan;
 
 public class Fan {
     private final int SLOW = 1;

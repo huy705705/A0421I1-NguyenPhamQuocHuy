@@ -1,6 +1,6 @@
 package b3_mang_va_phuong_thuc_java.thuc_hanh;
 import java.util.Scanner;
-public class _2FindValue {
+public class  FindValue2 {
     public static void main(String[] args) {
         Scanner scanner=new Scanner(System.in);
         String[] students = {"Christian", "Michael", "Camila", "Sienna", "Tanya", "Connor", "Zachariah", "Mallory", "Zoe", "Emily"};

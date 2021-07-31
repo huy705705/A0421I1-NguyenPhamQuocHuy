@@ -1,4 +1,4 @@
-package b4_lop_va_doi_tuong_trong_java.bai_tap._1_quadratic_equation;
+package b4_lop_va_doi_tuong_trong_java.bai_tap.b1_quadratic_equation;
 
 public class QuadraticEquation {
     private double a,b,c;
