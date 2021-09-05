@@ -1,4 +1,5 @@
-package b10.bai_tap.b1_;
+package b10_DSA.bai_tap.b1_array_list;
+import b10.bai_tap.b1_.MyList;
 
 public class MyListTest {
 
