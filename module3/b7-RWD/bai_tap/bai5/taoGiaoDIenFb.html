@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      .col-1 {
+         width: 8.33%;
+      }
+
+      .col-2 {
+         width: 16.66%;
+      }
+
+      .col-3 {
+         width: 25%;
+      }
+
+      .col-4 {
+         width: 33.33%;
+      }
+
+      .col-5 {
+         width: 41.66%;
+      }
+
+      .col-6 {
+         width: 50%;
+      }
+
+      .col-7 {
+         width: 58.33%;
+      }
+
+      .col-8 {
+         width: 66.66%;
+      }
+
+      .col-9 {
+         width: 75%;
+      }
+
+      .col-10 {
+         width: 83.33%;
+      }
+
+      .col-11 {
+         width: 91.66%;
+      }
+
+      .col-12 {
+         width: 100%;
+      }
+
+      .row {
+         display: flex;
+         flex-wrap: wrap;
+      }
+
+      body {
+         margin: 0;
+      }
+
+      .header {
+         width: 100%;
+         height: 50px;
+         position: fixed;
+         background-color: cornflowerblue;
+         padding: 10px;
+         top: 0;
+      }
+
+      .content {
+         box-sizing: border-box;
+         margin-top: 60px;
+         height: auto;
+         left: 10px;
+
+      }
+
+      .aside {
+         background-color: rgb(221, 217, 217);
+
+      }
+
+      .footer {
+         background-color: black;
+         color: white;
+      }
+
+      .box1 {
+         border-bottom: 2px solid rgba(240, 14, 14, 0.295);
+      }
+
+      .box2 {
+         padding-top: 10px;
+         margin-top: 20px;
+         background-color: white;
+         border-radius: 8px;
+         padding-bottom: 20px;
+      }
+
+      .left p {
+         margin-bottom: 30px;
+         padding: 10px;
+         font-size: 30px;
+
+      }
+
+      .right p {
+         margin-bottom: 30px;
+         padding: 10px;
+         font-size: 30px;
+      }
+
+      .center {
+         background-color: rgb(221, 217, 217);
+         box-sizing: border-box;
+      }
+
+      input {
+         padding: 10px;
+         border-radius: 5px;
+         align-items: center;
+         height: 30px;
+         width: 300px;
+         font-weight: 400px;
+      }
+
+      .header p {
+         font-size: 30px;
+         text-align: center;
+         box-sizing: border-box;
+         margin-top: 0;
+         margin-bottom: 0;
+         padding-right: 100px;
+      }
+
+      .img {
+         background-image: url(https://image.vtc.vn/upload/2021/06/17/ramos-03131976.jpeg);
+         background-size: 100% ;
+         width: 100%;
+         height: 50vh;
+         background-repeat: no-repeat;
+         box-sizing: border-box; 
+      }
+      .text{
+         text-align: center;
+         padding-top: 5px;
+         font-size: 20px;
+         border-top: 2px solid gray;
+         margin-top: 5px;
+         padding-bottom: 10px;
+         border-radius: 8px;
+      }
+      .text:hover{
+         opacity: 0.8;
+         background-color: gray;
+         cursor: pointer;
+      }
+      .share{
+         height: 50px;
+      }
+   </style>
+</head>
+
+<body>
+   <div class="row header">
+      <div class="col-3 ">
+         <p>Facebook</p>
+      </div>
+      <div class="col-3  ">
+         <input type="text" placeholder="search ....">
+      </div>
+   </div>
+   <div class=" row">
+      <div class="col-2 aside left">
+         <p class="box1">Box 1 </p>
+         <p class="box1">Box 1 </p>
+         <p class="box1">Box 1 </p>
+         <p class="box1">Box 1 </p>
+         <p class="box1">Box 1 </p>
+         <p class="box1">Box 1 </p>
+         <p class="box1">Box 1 </p>
+      </div>
+      <div class="col-1 aside"></div>
+      <div class="col-6 center content">
+         <div class="box2">
+            <div class="img "></div>
+            <div class="share" ></div>
+            <div class="row">
+               <div class="col-4 text">Thích</div>
+               <div class="col-4 text">Bình luận</div>
+               <div class="col-4 text">Chia sẻ</div>
+            </div>
+         </div>
+         <div class="box2">
+            <div class="img "></div>
+            <div class="share" ></div>
+            <div class="row">
+               <div class="col-4 text">Thích</div>
+               <div class="col-4 text">Bình luận</div>
+               <div class="col-4 text">Chia sẻ</div>
+            </div>
+         </div>
+         <div class="box2">
+            <div class="img "></div>
+            <div class="share" ></div>
+            <div class="row">
+               <div class="col-4 text">Thích</div>
+               <div class="col-4 text">Bình luận</div>
+               <div class="col-4 text">Chia sẻ</div>
+            </div>
+         </div>
+         <div class="box2">
+            <div class="img "></div>
+            <div class="share" ></div>
+            <div class="row">
+               <div class="col-4 text">Thích</div>
+               <div class="col-4 text">Bình luận</div>
+               <div class="col-4 text">Chia sẻ</div>
+            </div>
+         </div>
+         <div class="box2">
+            <div class="img "></div>
+            <div class="share" ></div>
+            <div class="row">
+               <div class="col-4 text">Thích</div>
+               <div class="col-4 text">Bình luận</div>
+               <div class="col-4 text">Chia sẻ</div>
+            </div>
+         </div>
+         <div class="box2">
+            <div class="img "></div>
+            <div class="share" ></div>
+            <div class="row">
+               <div class="col-4 text">Thích</div>
+               <div class="col-4 text">Bình luận</div>
+               <div class="col-4 text">Chia sẻ</div>
+            </div>
+         </div>
+      </div>
+      <div class="col-1 aside"></div>
+      <div class="col-2 aside right">
+         <p class="box1">Box 1 </p>
+         <p class="box1">Box 1 </p>
+         <p class="box1">Box 1 </p>
+         <p class="box1">Box 1 </p>
+         <p class="box1">Box 1 </p>
+         <p class="box1">Box 1 </p>
+         <p class="box1">Box 1 </p>
+      </div>
+   </div>
+   <div class="row footer">
+      <h1>footer</h1>
+   </div>
+</body>
+
+</html>

@@ -166,7 +166,7 @@ select * from hop_dong_chi_tiet;
 --  having 'so ki tu'<10;
 
 -- task2
- select *,char_length(ho_ten)as 'sokitu',now() from nhan_vien  where  char_length(ho_ten)<=15;
+ select *,char_length(ho_ten)as 'sokitu',now() from nhan_vien  where ho_ten like 'h%'or ho_ten like 't%' or ho_ten like 'K%' and char_length(ho_ten)<=15;
  -- task3  so sánh năm
  select *,round(datediff(curdate(),ngay_sinh)/365,0) as tuoi from khach_hang  where (dia_chi='da nang' or dia_chi='quang tri' )
  and (round(datediff(curdate(),ngay_sinh)/365,0) between 18 and 50);
@@ -239,14 +239,12 @@ join hop_dong on hop_dong.id_nhan_vien=nhan_vien.id_nhan_vien
 group by nhan_vien.id_nhan_vien
 having count(hop_dong.id_hop_dong)>0 and hop_dong.ngay_lam_hop_dong >'2021-02-20' and hop_dong.ngay_lam_hop_dong <'2022-02-20' ;
 -- task 16
-
-
 select * from nhan_vien
 where not exists (select *,count(hop_dong.id_hop_dong) from hop_dong
 where nhan_vien.id_nhan_vien=hop_dong.id_nhan_vien
 group by nhan_vien.id_nhan_vien
 having count(hop_dong.id_hop_dong)>0 and (hop_dong.ngay_lam_hop_dong<'2021-12-29' and hop_dong.ngay_lam_hop_dong>'2021-01-01'));
-
+-- task 17 
 
 
 

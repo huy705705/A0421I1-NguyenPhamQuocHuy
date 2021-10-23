@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @media only screen and (max-width: 739px) {
+            [class*="col-"] {
+                width: 100%;
+                color: red;
+            }
+        }
+
+        @media only screen and (min-width: 740px) and (max-width:1023px) {
+
+            .col-m-1 {
+                width: 8.33333%;
+            }
+
+            .col-m-2 {
+                width: 16.66667%;
+            }
+
+            .col-m-3 {
+                width: 25%;
+            }
+
+            .col-m-4 {
+                width: 33.33333%;
+            }
+
+            .col-m-5 {
+                width: 41.66667%;
+            }
+
+            .col-m-6 {
+                width: 50%;
+            }
+
+            .col-m-7 {
+                width: 58.33333%;
+            }
+
+            .col-m-8 {
+                width: 66.66667%;
+            }
+
+            .col-m-9 {
+                width: 75%;
+            }
+
+            .col-m-10 {
+                width: 83.33333%;
+            }
+
+            .col-m-11 {
+                width: 91.66667%;
+            }
+
+            .col-m-12 {
+                width: 100%;
+            }
+        }
+
+        @media only screen and (min-width: 1024px) {
+            .col-l-1 {
+                width: 8.33333%;
+            }
+
+            .col-l-2 {
+                width: 16.66667%;
+            }
+
+            .col-l-3 {
+                width: 25%;
+            }
+
+            .col-l-4 {
+                width: 33.33333%;
+            }
+
+            .col-l-5 {
+                width: 41.66667%;
+            }
+
+            .col-l-6 {
+                width: 50%;
+            }
+
+            .col-l-7 {
+                width: 58.33333%;
+            }
+
+            .col-l-8 {
+                width: 66.66667%;
+            }
+
+            .col-l-9 {
+                width: 75%;
+            }
+
+            .col-l-10 {
+                width: 83.33333%;
+            }
+
+            .col-l-11 {
+                width: 91.66667%;
+            }
+
+            .col-l-12 {
+                width: 100%;
+            }
+        }
+
+
+        .col-1 {
+            width: 8.33%;
+        }
+
+        .col-2 {
+            width: 16.66%;
+        }
+
+        .col-3 {
+            width: 25%;
+        }
+
+        .col-4 {
+            width: 33.33%;
+        }
+
+        .col-5 {
+            width: 41.66%;
+        }
+
+        .col-6 {
+            width: 50%;
+        }
+
+        .col-7 {
+            width: 58.33%;
+        }
+
+        .col-8 {
+            width: 66.66%;
+        }
+
+        .col-9 {
+            width: 75%;
+        }
+
+        .col-10 {
+            width: 83.33%;
+        }
+
+        .col-11 {
+            width: 91.66%;
+        }
+
+        .col-12 {
+            width: 100%;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .header {
+            background-color: black;
+            margin: 0;
+            height: 38px;
+            color: white;
+        }
+
+        .search {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .footer {
+            height: 100px;
+            width: 100%;
+            background-color: black;
+            color: blanchedalmond;
+        }
+
+        .footer p {
+            padding-left: 400px;
+        }
+
+        ul {
+            padding: 10px;
+            margin: 0;
+        }
+
+        li {
+            display: inline;
+            color: white;
+            padding: 10px;
+            padding-top: 20px;
+        }
+
+        .content {
+            height: auto;
+            background-color: blanchedalmond;
+        }
+
+        .left,
+        .right {
+            background-color: white;
+            height: auto;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .search:hover,
+        li:hover {
+            opacity: 0.8;
+            background-color: rgb(146, 140, 140);
+            cursor: pointer;
+        }
+
+        .link p {
+            text-align: center;
+        }
+
+        .box {
+
+            width: 60px;
+            margin-left: 40%;
+        }
+
+        .box p {
+            background-color: rgb(170, 167, 162);
+            padding-top: 30px;
+            padding-bottom: 30px;
+            padding-left: 30px;
+            padding-right: 60px;
+            border: rgb(206, 205, 203) solid 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-l-10 col-m-12 header">
+            <ul>
+                <li>Logo</li>
+                <li>Home</li>
+                <li>About</li>
+                <li>Projects</li>
+                <li>Contact</li>
+            </ul>
+        </div>
+        <div class="col-l-2 header col-m-12 search">Login</div>
+    </div>
+    <div class="row ">
+        <div class="col-l-3 col-m-12 left">
+            <div class="link">
+                <p>Link</p>
+            </div>
+            <div class="link">
+                <p>Link</p>
+            </div>
+            <div class="link">
+                <p>Link</p>
+            </div>
+        </div>
+        <div class="col-l-6 col-m-12 content">
+            <p>"Welcome to Paradise" is a song by the American rock band Green Day.
+                It first appeared as the third track on the band's second studio album, Kerplunk.
+                It was re-recorded and rereleased as the fifth track on their third studio album,
+                Dookie, and released as the album's third single on October 4, 1994. The Dookie version
+                is more popular, and was later included on the band's 2001 compilation album International Superhits!
+                . "Welcome to Paradise" is playable in the video game Green
+                Day: Rock Band. The song peaked at number 56 on the Hot 100 Airplay chart.[3]</p>
+        </div>
+        <div class="col-l-3 col-m-12 right">
+            <div class="box">
+                <p>ADS</p>
+            </div>
+            <div class="box">
+                <p>ADS</p>
+            </div>
+            <div class="box">
+                <p>ADS</p>
+            </div>
+        </div>
+    </div>
+    <div class="row footer">
+        <div>
+            <p> footer text</p>
+        </div>
+    </div>
+</body>
+
+</html>
