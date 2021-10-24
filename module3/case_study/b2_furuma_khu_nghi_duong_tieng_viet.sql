@@ -245,8 +245,36 @@ where nhan_vien.id_nhan_vien=hop_dong.id_nhan_vien
 group by nhan_vien.id_nhan_vien
 having count(hop_dong.id_hop_dong)>0 and (hop_dong.ngay_lam_hop_dong<'2021-12-29' and hop_dong.ngay_lam_hop_dong>'2021-01-01'));
 -- task 17 
-
-
+update khach_hang set id_loai_khach=1
+ where exists(
+select  *,dich_vu.chi_phi_thue+hop_dong_chi_tiet.so_luong*dich_vu_di_kem.gia 'tong tien'
+ from khach_hang
+ join loai_khach on khach_hang.id_loai_khach=loai_khach.id_loai_khach
+ join hop_dong on hop_dong.id_khach_hang=khach_hang.id_khach_hang
+ join dich_vu on dich_vu.id_dich_vu=hop_dong.id_dich_vu
+ join hop_dong_chi_tiet on hop_dong_chi_tiet.id_hop_dong=hop_dong.id_hop_dong
+ join dich_vu_di_kem on dich_vu_di_kem.id_dich_vu_di_kem=hop_dong_chi_tiet.id_dich_vu_di_kem
+ where dich_vu.chi_phi_thue+hop_dong_chi_tiet.so_luong*dich_vu_di_kem.gia >5000000 and khach_hang.id_loai_khach=2);
+ -- task 18
+ delete from khach_hang where exists(
+ select *,min(hop_dong.ngay_lam_hop_dong) from khach_hang 
+ join hop_dong on khach_hang.id_khach_hang=hop_dong.id_khach_hang
+ group by khach_hang.id_khach_hang
+ having hop_dong.ngay_lam_hop_dong<	'2021-02-20'
+ order by khach_hang.id_khach_hang,hop_dong.ngay_lam_hop_dong);
+ 
+ 
+-- task19
+update dich_vu_di_kem set gia=gia*2
+where exists(
+select *,sum(hop_dong_chi_tiet.so_luong) from dich_vu_di_kem
+join hop_dong_chi_tiet on dich_vu_di_kem.id_dich_vu_di_kem=hop_dong_chi_tiet.id_dich_vu_di_kem
+group by dich_vu_di_kem.id_dich_vu_di_kem
+having sum(hop_dong_chi_tiet.so_luong)>3);
+-- task20
+select  khach_hang.id_khach_hang,khach_hang.ho_ten,khach_hang.email,khach_hang.sdt,khach_hang.ngay_sinh,khach_hang.dia_chi from khach_hang
+union
+select nhan_vien.id_nhan_vien,nhan_vien.ho_ten,nhan_vien.email,nhan_vien.sdt,nhan_vien.ngay_sinh,nhan_vien.dia_chi from nhan_vien;
 
   select * from khach_hang;
     select * from loai_khach;
