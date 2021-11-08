@@ -72,7 +72,7 @@ public class ServletUser extends HttpServlet {
             throws SQLException, IOException, ServletException{
         String country=request.getParameter("country");
         List<User> listSearchUser=userDAO.search(country);
-        request.setAttribute("listUser",listSearchUser);
+        request.setAttribute("listSearchUser",listSearchUser);
         RequestDispatcher dispatcher=request.getRequestDispatcher("/search.jsp");
         dispatcher.forward(request,response);
     }
@@ -133,9 +133,9 @@ public class ServletUser extends HttpServlet {
 
     private void sortByName(HttpServletRequest request, HttpServletResponse response)
             throws SQLException, IOException, ServletException{
-        List<User> listUser=userDAO.sort();
-        request.setAttribute("listUser",listUser);
-        RequestDispatcher dispatcher=request.getRequestDispatcher("/list.jsp");
+        List<User> listSortUser=userDAO.sort();
+        request.setAttribute("listSortUser",listSortUser);
+        RequestDispatcher dispatcher=request.getRequestDispatcher("/sort.jsp");
         dispatcher.forward(request,response);
     }
 
