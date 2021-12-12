@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<h1>Delete song</h1>
+<p>
+    <a th:href="@{/song}">
+        Back to product list
+    </a>
+</p>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="form">
+    <form th:action="@{/song/delete}" th:object="${song}"
+          method="post" novalidate="novalidate">
+        <input type="hidden" th:field="*{id}">
+        <div>
+            <label >Name</label>
+            <input type="text" th:field="*{name}" disabled>
+        </div>
+        <div>
+            <label >Singer</label>
+            <input type="text" th:field="*{singer}" disabled>
+        </div>
+        <div>
+            <label >Type</label>
+            <input type="text" th:field="*{type}" disabled>
+        </div>
+        <div>
+            <label >Link</label>
+            <input type="text" th:field="*{link}" disabled>
+        </div>
+        <input type="submit" value="Delete">
+
+    </form>
+</div>
+</body>
+</html>
