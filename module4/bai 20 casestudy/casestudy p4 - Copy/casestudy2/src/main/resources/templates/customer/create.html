@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="/css/bootstrap.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<th:block th:if="${message}">
+    <p th:text="${message}"></p>
+</th:block>
+<form class="row g-3" th:action="@{/customer/create-customer}" method="post" th:object="${customer}">
+    <table class="table">
+
+        <tr>
+            <td><input type="hidden" th:field="*{id}"></td>
+        </tr>
+        <tr>
+            <th scope="col">Name</th>
+            <td><input type="text" th:field="*{customerName}"></td>
+        </tr>
+        <tr>
+            <th scope="row">Birthday</th>
+            <td><input type="text" th:field="*{customerBirthday}"></td>
+        </tr>
+        <tr>
+            <th scope="row">Gender</th>
+            <td>
+                <select th:field="*{customerGender}">
+                    <option value="none" selected>Select gender</option>
+                    <option value="true">Nam</option>
+                    <option value="false">Nữ</option>
+
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">Id card</th>
+            <td><input type="text" th:field="*{customerIdCard}"></td>
+        </tr>
+        <tr>
+            <th scope="row">Phone</th>
+            <td><input type="text" th:field="*{customerPhone}"></td>
+        </tr>
+        <tr>
+            <th scope="row">Email</th>
+            <td><input type="text" th:field="*{customerEmail}"></td>
+        </tr>
+        <tr>
+            <th scope="row">Address</th>
+            <td><input type="text" th:field="*{customerAddress}"></td>
+        </tr>
+        <tr>
+            <th scope="row">Customer type</th>
+            <td>
+                <select th:field="*{customerType}" id="">
+                    <option th:each="customerType:${customerTypes}"
+                            th:value="${customerType.id}" th:text="${customerType.customerTypeName}"></option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input class="btn btn-primary" type="submit" value="Create product"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

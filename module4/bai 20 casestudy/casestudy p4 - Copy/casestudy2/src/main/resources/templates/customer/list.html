@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="/css/bootstrap.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<button type="button" class="btn btn-primary btn-lg" id="btnModalCreate">
+    Create
+</button>
+<br>
+<h3 th:if="${message}" th:text="${message}" style="color: red"></h3>
+<input type="text" id="searchCustomerByName">
+<button th:onclick="searchCustomerByName()">Search customer</button>
+<br>
+<!-- Danh sach customer -->
+<div id="searchTable">
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Birthday</th>
+            <th scope="col">Gender</th>
+            <th scope="col">Id card</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Email</th>
+            <th scope="col">Address</th>
+            <th scope="col">Type</th>
+            <th scope="col">View</th>
+            <th scope="col">Delete</th>
+            <th scope="col">Edit</th>
+
+        </tr>
+        </thead>
+        <tbody>
+
+        <tr th:each="customer:${customers}">
+            <th scope="row" th:text="${customer.id}"></th>
+            <td th:text="${customer.customerName}"></td>
+            <td th:text="${customer.customerBirthday}"></td>
+            <td th:switch="${customer.customerGender}">
+                <span th:case="true" th:text="Nam"></span>
+                <span th:case="false" th:text="Nữ"></span>
+            </td>
+            <td th:text="${customer.customerIdCard}"></td>
+            <td th:text="${customer.customerPhone}"></td>
+            <td th:text="${customer.customerEmail}"></td>
+            <td th:text="${customer.customerAddress}"></td>
+            <td th:text="${customer.customerType.customerTypeName}"></td>
+            <td>
+                <button class="btn btn-primary" th:onclick="'javascript:viewCustomer('+ ${customer.id} + ')'">View</button>
+            </td>
+            <td>
+                <button class="btn btn-primary"  th:onclick="'javascript:deleteCustomer('+ ${customer.id} + ')'">Delete</button>
+            </td>
+            <td>
+                <button class="btn btn-primary">
+                    <a style="color: azure;text-decoration: none" th:href="@{/customer/edit/{id}(id=${customer.id})}">Edit</a>
+                </button>
+            </td>
+        </tr>
+
+
+        </tbody>
+    </table>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Customer Management</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Body
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="/js/jquery-3.5.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+<script>
+    $(document).ready(function () {
+        $("#btnModalCreate").click(function () {
+            $.ajax({
+                type: "GET",
+                url: "/customer/create-customer",
+                dataType: "HTML",
+                success: function (data) {
+                    $(".modal-body").html(data);
+                    $("#modelId").modal('show');
+                }
+            });
+        });
+    });
+</script>
+<script>
+    function viewCustomer(id) {
+
+        $.ajax({
+            type: "get",
+            url: "/customer/view/" + id,
+            data: "html",
+            success: function (data) {
+                $(".modal-body").html(data);
+                $("#modelId").modal('show');
+            }
+        });
+    };
+</script>
+<script>
+    function deleteCustomer(id) {
+
+        $.ajax({
+            type: "get",
+            url: "/customer/delete/" + id,
+            data: "html",
+            success: function (data) {
+                $(".modal-body").html(data);
+                $("#modelId").modal("show");
+            }
+        });
+    };
+</script>
+<script>
+    function actionDelete(id) {
+        console.log(id)
+        $.ajax({
+
+            type: "post",
+            url: "/customer/actionDelete/" + id,
+            data: "html",
+
+            success: function (data) {
+                console.log(data)
+                let message = "Delete successfully";
+                setTimeout(function (){
+                    $("#modelId").modal("hide");
+                },3000);
+                $(".modal-body").html(message);
+                $("#searchTable").html(data);
+
+            }
+        });
+    };
+</script>
+<script>
+    function searchCustomerByName(){
+        let customerName=$("#searchCustomerByName").val();
+        $.ajax({
+
+            type: "get",
+            url: "/customer/searchCustomerByName" ,
+            data:{
+                searchCustomerByName:customerName
+            },
+            dataType: "html",
+            success: function (data) {
+                console.log(data)
+                $("#searchTable").html(data);
+            }
+        });
+    }
+</script>
+</body>
+</html>

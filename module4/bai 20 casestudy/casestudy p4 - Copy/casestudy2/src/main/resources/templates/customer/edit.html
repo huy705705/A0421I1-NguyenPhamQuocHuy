@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Customer</title>
+</head>
+<body>
+<h3>Edit customer</h3>
+<form th:object="${customer}" th:action="@{/customer/actionEdit}"  method="post">
+    <table class="table">
+
+        <tr>
+            <td><input type="hidden" th:field="*{id}" hidden></td>
+        </tr>
+        <tr>
+            <th scope="col">Name</th>
+            <td><input type="text" th:field="*{customerName}"></td>
+        </tr>
+        <tr>
+            <th scope="row">Birthday</th>
+            <td><input type="text" th:field="*{customerBirthday}" ></td>
+        </tr>
+        <tr>
+            <th scope="row">Gender</th>
+            <td>
+                <select th:field="*{customerGender}">
+                    <option value="true" th:text="Nam"></option>
+                    <option value="false" th:text="Nữ"></option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">Id card</th>
+            <td><input type="text" th:field="*{customerIdCard}"></td>
+        </tr>
+        <tr>
+            <th scope="row">Phone</th>
+            <td><input type="text" th:field="*{customerPhone}"></td>
+        </tr>
+        <tr>
+            <th scope="row">Email</th>
+            <td><input type="text" th:field="*{customerEmail}"></td>
+        </tr>
+        <tr>
+            <th scope="row">Address</th>
+            <td><input type="text" th:field="*{customerAddress}"></td>
+        </tr>
+        <tr>
+            <th scope="row">Customer type</th>
+            <td>
+                <select th:field="*{customerType}" id="">
+                    <option th:each="customerTypee:${customerTypes}"
+                            th:value="${customerTypee.id}" th:text="${customerTypee.customerTypeName}"></option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input class="btn btn-primary" type="submit" value="Edit product"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

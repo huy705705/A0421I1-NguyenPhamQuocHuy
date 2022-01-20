@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title> View Customer</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="/css/bootstrap.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<h3>View Customer</h3>
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">#</th>
+        <th scope="row" th:text="${customer.id}" disabled=""></th>
+    </tr>
+
+    <tr>
+        <th scope="col">Name</th>
+        <td th:text="${customer.customerName}" disabled=""></td>
+    </tr>
+
+    <tr>
+        <th scope="col">Birthday</th>
+        <td th:text="${customer.customerBirthday}" disabled=""></td>
+    </tr>
+
+    <tr>
+        <th scope="col">Gender</th>
+        <td th:switch="${customer.customerGender}" disabled="">
+            <span th:case="true" th:text="Nam" disabled></span>
+            <span th:case="false" th:text="Nữ" disabled></span>
+        </td>
+    </tr>
+
+    <tr>
+        <th scope="col">Id card</th>
+        <td th:text="${customer.customerIdCard}" disabled=""></td>
+    </tr>
+
+    <tr>
+        <th scope="col">Phone</th>
+        <td th:text="${customer.customerPhone}" disabled=""></td>
+    </tr>
+
+    <tr>
+        <th scope="col">Email</th>
+        <td th:text="${customer.customerEmail}" disabled=""></td>
+    </tr>
+
+    <tr>
+        <th scope="col">Address</th>
+        <td th:text="${customer.customerAddress}" disabled=""></td>
+    </tr>
+    <tr>
+        <th scope="row">Customer type</th>
+        <td th:text="${customer.customerType.customerTypeName}"></td>
+    </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+
+</body>
+</html>

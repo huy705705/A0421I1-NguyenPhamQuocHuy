@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Search table</title>
+</head>
+<body>
+
+<!-- Danh sach customer -->
+<div id="searchTable">
+    <div>
+
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Birthday</th>
+                <th scope="col">Gender</th>
+                <th scope="col">Id card</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Email</th>
+                <th scope="col">Address</th>
+                <th scope="col">View</th>
+                <th scope="col">Delete</th>
+                <th scope="col">Edit</th>
+            </tr>
+            </thead>
+            <tbody>
+
+            <tr th:each="customer:${customers}">
+                <th scope="row" th:text="${customer.id}"></th>
+                <td th:text="${customer.customerName}"></td>
+                <td th:text="${customer.customerBirthday}"></td>
+                <td th:switch="${customer.customerGender}">
+                    <span th:case="true" th:text="Nam"></span>
+                    <span th:case="false" th:text="Nữ"></span>
+                </td>
+                <td th:text="${customer.customerIdCard}"></td>
+                <td th:text="${customer.customerPhone}"></td>
+                <td th:text="${customer.customerEmail}"></td>
+                <td th:text="${customer.customerAddress}"></td>
+                <!--            <td><button id="btnModalView" th:onclick="'javascript:viewCustomer('+ ${customer.id} + ')'">View</button></td>-->
+                <!--            <td><button id="btnModalDelete" th:onclick="'javascript:deleteCustomer('+ ${customer.id} + ')'">Delete</button></td>-->
+                <td>
+                    <button class="btn btn-primary" th:onclick="'javascript:viewCustomer('+ ${customer.id} + ')'">View
+                    </button>
+                </td>
+                <td>
+                    <button class="btn btn-primary" th:onclick="'javascript:deleteCustomer('+ ${customer.id} + ')'">
+                        Delete
+                    </button>
+                </td>
+                <td>
+                    <button class="btn btn-primary">
+                        <a style="color: azure;text-decoration: none"
+                           th:href="@{/customer/edit/{id}(id=${customer.id})}">Edit</a>
+                    </button>
+                </td>
+            </tr>
+
+
+            </tbody>
+        </table>
+    </div>
+    <div>
+<!--        <a th:href="@{'/customer/searchCustomerByName/'(page=${customers.number-1}-->
+<!--    ,searchCustomerByName=${customerNameSearch})}" th:if="${customers.hasPrevious()}">Previous</a>-->
+        <button class="btn btn-primary" th:onclick="'javascript:backPage('+ ${customers.number-1} + ')'"
+                th:if="${customers.hasPrevious()}">Previous2 </button>
+
+        <span th:text="${customers.number+1}">tren </span><span th:text="${customers.totalPages}"></span>
+
+<!--        <a th:href="@{'/customer/searchCustomerByName/'(page=${customers.number+1}-->
+<!--    ,searchCustomerByName=${customerNameSearch})}" th:if="${customers.hasNext()}">Next</a>-->
+
+        <button class="btn btn-primary" th:onclick="'javascript:nextPage('+ ${customers.number+1} + ')'"
+                th:if="${customers.hasNext()}">Next2</button>
+
+    </div>
+</div>
+</body>
+</html>
